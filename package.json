@@ -1,0 +1,7 @@
+{
+  "name": "palo",
+  "description": "Palo client for node.js",
+  "version": "0.1",
+  "author": "Arnold van der Meulen <zwippie@gmail.com>",
+  "main": "./index.js",
+}
