@@ -26,22 +26,15 @@ with a default compile of the latest open source version of [Palo](http://source
 Test from a node console:
 
     var palo = require('palo');
-    paloUrl = 'http://localhost:7777/server/login?user=test&password=test';
-    palo.get(paloUrl);
-
+    var paloUrl = 'http://localhost:7777/server/login?user=test&password=test';
+    palo.call(paloUrl, console.log);
+    
 Result:
-
-    0GTs;3600;
-
-To get the result as an array:
-
-    palo.get(paloUrl, function(paloResult) {
-      console.log(palo.CSVToArray(paloResult, ";"));
-    });
-
-Result:
-
-    [ [ '93bn', '3600' ] ]
+    { success: true,
+        data: [ [ 'HJvn', '3600' ] ],
+        statusCode: 200,
+        headers: { 'x-palo-sv': '1977569839' }
+    }
 
 TODO: Show usage with node htpp or express
 
