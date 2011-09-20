@@ -7,6 +7,7 @@ It's easy to implement in a project with middleware like [express](http://expres
 (single page) webapplications aimed at data analysis, budgetting or reporting.
 
 Features include:
+
 * Act as a proxy to a palo server, allowing access on any http port
 * Conversion of CSV server results to JSON objects, with optional column mapping
 * Custom authentication and authorization (ACL)
