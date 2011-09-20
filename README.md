@@ -1,18 +1,28 @@
-# PALO client for node.js
+# palo client for node.js
 
-Node_palo is a database module that connects to a Jedox PALO OLAP (online
-analytical processing) database server. Designed for use with [node.js](http://nodejs.org),
-it's easy to implement in a project with middleware like [express](http://expressjs.com/) to create
+_Note: this document is just a draft, actual coding is still in an early stage._
+
+Node_palo is a database module for [node.js](http://nodejs.org) that connects to a Palo database server.
+It's easy to implement in a project with middleware like [express](http://expressjs.com/) to create
 (single page) webapplications aimed at data analysis, budgetting or reporting.
 
-Jedox PALO is an in memory online analytical processing (MOLAP) database that is
+Features include:
+* Act as a proxy to a palo server, allowing access on any http port
+* Conversion of CSV server results to JSON objects, with optional column mapping
+* Custom authentication and authorization (ACL)
+* Create custom methods to build complex datastructures serverside, then send to client
+
+
+## What is Palo?
+
+[Jedox Palo](http://www.jedox.com) is an in memory online analytical processing (MOLAP) database that is
 available with both an open source and a commercial license. Node_palo is tested
-with a default compile of the latest open source version of [PALO](http://sourceforge.net/projects/palo).
+with a default compile of the latest open source version of [Palo](http://sourceforge.net/projects/palo).
 
 
 ## Usage
 
-Create the most basic palo server proxy application
+Test from a node console:
 
     var palo = require('palo');
     paloUrl = 'http://localhost:7777/server/login?user=test&password=test';
